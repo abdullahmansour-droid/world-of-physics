@@ -1,0 +1,633 @@
+::selection {
+  color: white;
+  background-color: teal;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(22, 25, 32);
+  padding: 0;
+  text-transform: capitalize;
+  min-height: 500vh;
+}
+#first_h {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 100;
+  margin: 50px;
+}
+nav div i {
+  color: white;
+  font-size: 25px;
+  transition-duration: 0.2s;
+}
+nav div a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition-duration: 0.2s;
+}
+nav div a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: wheat;
+  transition-duration: 0.3s;
+}
+nav div a:hover::after {
+  width: 100%;
+}
+
+#listicon {
+  display: none;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+nav div a:hover,
+i:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+#header {
+  /* background-image: url(header.jpg);
+  background-size: cover;
+  background-attachment:fixed;
+  background-repeat:no-repeat; */
+  width: 100%;
+  height: 100vh;
+}
+
+#header img {
+  width: 100%;
+  height: 700px;
+  opacity: 0.6;
+  position: relative;
+}
+.h_1 {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translate(-50%, -50%);
+  color: rgb(8, 106, 187);
+  font-size: 50px;
+  font-style: italic;
+}
+.h_2 {
+  position: absolute;
+  top: 60%;
+  left: 200px;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-style: italic;
+  color: white;
+  font-weight: light;
+}
+
+#mession {
+  width: 95%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  gap: 20px;
+  margin-top: 30px;
+}
+#mession div {
+  position: relative;
+  border-radius: 20px;
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#mession div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: wheat;
+  transition: 0.3s;
+}
+#mession div:hover::after {
+  width: 100%;
+}
+
+#mession div i {
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  background-color: teal;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+#mession div aside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+#mession div aside p {
+  color: lightgray;
+  opacity: 0.6;
+}
+
+#real {
+  margin-top: 100px;
+  color: teal;
+  font-size: 25px;
+  font-style: oblique;
+  text-align: center;
+}
+
+#real .p {
+  color: white;
+  letter-spacing: 2px;
+  margin-top: 100px;
+}
+
+#real .p_1 {
+  color: rgba(211, 211, 211, 0.226);
+  margin-top: 100px;
+}
+/* Remove the default border */
+hr {
+  border: none;
+  height: 2px;
+  background-color: teal; /* Change the color to black */
+  width: 50%; /* Set the width to 50% of its container */
+  margin: 20px auto; /* Centers the line horizontally and adds a 20-pixel margin above and below it */
+}
+
+#disc {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#disc div:first-child {
+  width: calc((100% - 60px) / 4);
+  height: 600px;
+  margin: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 50px;
+  background-image: url(physics1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-duration: 0.3s;
+}
+
+#disc div:nth-child(2) {
+  width: calc((100% - 60px) / 4);
+  height: 600px;
+  margin: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 50px;
+  background-image: url(physics2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-duration: 0.3s;
+}
+
+#disc div:nth-child(3) {
+  width: calc((100% - 60px) / 4);
+  height: 600px;
+  margin: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 50px;
+  background-image: url(physics34.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-duration: 0.3s;
+}
+
+#disc div:hover {
+  transform: translateY(-20px);
+  border-radius: 0%;
+  border: 2px solid burlywood;
+}
+#disc div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  flex-direction: column;
+  transition-duration: 0.5s;
+}
+
+#disc div p {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-style: italic;
+  margin: 20px;
+}
+#disc div button {
+  color: black;
+  background-color: white;
+  font-size: 20px;
+  font-style: italic;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 20px;
+  z-index: 10;
+  transition-duration: 0.3s;
+}
+#disc div button:hover {
+  color: white;
+  background-color: teal;
+}
+
+#service {
+  width: 100%;
+  height: 80vh;
+  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#service #top_ser {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: space-between;
+  gap: 30px;
+}
+#service #down_ser {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#service #top_ser div {
+  width: calc((100% - 60px) / 3);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px;
+}
+#service #top_ser div,
+i,
+#service #down_ser div,
+i {
+  color: white;
+  font-size: 30px;
+}
+
+#experts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#experts div:nth-child(1) {
+  width: 600px;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid white;
+}
+#experts #down {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 50px;
+}
+#experts #down div {
+  width: calc((100% - 60px) / 3);
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid white;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 400px;
+  margin: auto;
+  color: rgb(23, 235, 235);
+}
+
+#number div {
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
+}
+footer {
+  width: 100%;
+  height: 400px;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+footer > div {
+  color: white;
+  font-size: 20px;
+  font-weight: light;
+  margin: 30px;
+}
+
+#fixed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 10px;
+}
+#fixed i {
+  color: orange;
+  margin: 20px;
+  transition-duration: 0.3s;
+}
+#fixed i:hover {
+  color: white;
+  margin: 20px;
+  transform: scale(1.4);
+}
+
+#carrier {
+  width: 600px;
+  height: 500px;
+  display: none;
+}
+#hidden {
+  width: 600px;
+  height: 500px;
+  background-color: cadetblue;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
+}
+#hidden p:nth-child(1) {
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  margin: 30px;
+}
+#hidden input {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin: auto;
+  font-size: 20px;
+  outline: none;
+  color: yellowgreen;
+}
+#hidden button {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+  color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  margin: auto;
+  margin-bottom: 20px;
+}
+#hidden button:hover {
+  color: white;
+  background-color: teal;
+}
+
+textarea {
+  width: 90%;
+  margin: auto;
+  border-radius: 20px;
+  height: 300px;
+  font-size: 20px;
+  outline: none;
+}
+
+.h_1 {
+  animation-name: ani-text;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes ani-text {
+  from {
+    transform: translateX(200px);
+  }
+}
+.h_2 {
+  animation-name: ani-2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes ani-2 {
+  from {
+    transform: translatey(200px);
+  }
+}
+
+@media (max-width: 650px) {
+  nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+  }
+  nav {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px 20px;
+    z-index: 100;
+    display: none;
+  }
+  nav #right a {
+    position: relative;
+  }
+
+  nav #right a::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: wheat;
+    transition: width 0.3s ease;
+  }
+  nav #right a:hover::after {
+    width: 100%;
+  }
+
+  #listicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    position: sticky;
+    top: 30px;
+    z-index: 1000;
+  }
+
+  #mession {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+  }
+  #mession div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .h_1 {
+    font-size: 35px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+  }
+  .h_2 {
+    font-size: 25px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+  }
+  #first_h {
+    display: none;
+  }
+  #hidden {
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+
+  #disc {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #disc div {
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: orange;
+    flex-direction: column;
+  }
+  #service {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #service #top_ser {
+    display: none;
+  }
+  #experts {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #experts div {
+    padding: 200px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+  }
+}
